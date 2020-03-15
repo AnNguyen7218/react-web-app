@@ -1,7 +1,7 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components';
 
-import { lightTheme, darkTheme } from './theme';
+import { themeContainer } from './theme';
 import { GlobalStyles } from './global';
 
 import Toggle from './components/Common/Toggle'
@@ -13,13 +13,15 @@ import './App.css'
 
 const App: React.FC<{}> = () => {
   const {theme, toggleTheme, componentMounted} = useDarkMode()
-	
+
+	const themeMode = themeContainer[theme]
+
 	if (!componentMounted) {
     return <div />
 	}
 	
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={themeMode}>
        <>
         <GlobalStyles />
         <Toggle toggleTheme={toggleTheme} />
