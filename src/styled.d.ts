@@ -3,12 +3,10 @@ import 'styled-components'
 
 // and extend them!
 declare module 'styled-components' {
-  export interface IDefaultTheme {
-    borderRadius: string
-
-    colors: {
-      main: string
-      secondary: string
-    }
+  export interface DefaultTheme {
+    body: string,
+    text: string,
+    toggleBorder: string,
+    gradient: string,
   }
 }
