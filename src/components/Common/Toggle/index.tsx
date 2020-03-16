@@ -1,13 +1,14 @@
 import React from 'react'
-import {ToggleContainer} from './styles'
+import { ToggleContainer } from './styles'
 
-const Toggle = ({toggleTheme}: {toggleTheme:  (() => void )}) => {
-	
-	return (
-		<ToggleContainer onClick={toggleTheme}>
-			Switch Theme
-		</ToggleContainer>
-	)
+const Toggle = ({
+  toggleAction,
+  toggleText,
+}: {
+  toggleAction: () => void
+  toggleText: string
+}): JSX.Element => {
+  return <ToggleContainer onClick={toggleAction}>{toggleText}</ToggleContainer>
 }
 
 export default Toggle

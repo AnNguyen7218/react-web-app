@@ -14,6 +14,6 @@ const ToggleContainer = styled.button`
   position: relative;
   width: 8rem;
   height: 4rem;
-`;
+`
 
-export {ToggleContainer}
+export { ToggleContainer }
