@@ -5,6 +5,8 @@ import { themeContainer } from './theme/theme'
 import { GlobalStyles } from './global'
 
 import Toggle from './components/Common/Toggle'
+import LoadingComponent from './components/Common/Loading'
+
 import { useDarkMode } from './customHookFunctions/useDarkMode'
 import { useLanguage } from './customHookFunctions/useLanguage'
 import I18n from './I18n/index'
@@ -34,6 +36,7 @@ const App: React.FC<{}> = () => {
         <h1>It is a {theme === 'light' ? 'light theme' : 'dark theme'}!</h1>
         <h1>{I18n.logIn}</h1>
         <img src={logo} className="App-logo" alt="logo" />
+        <LoadingComponent />
       </>
     </ThemeProvider>
   )
