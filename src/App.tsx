@@ -11,6 +11,8 @@ import ProtectedRoute from './components/Common/ProtectedRoute'
 
 import { useDarkMode } from './customHookFunctions/useDarkMode'
 import { useLanguage } from './customHookFunctions/useLanguage'
+
+import { routePaths } from './utils/constants'
 import I18n from './I18n/index'
 
 import logo from './logo.svg'
@@ -56,7 +58,7 @@ const App: React.FC<{}> = () => {
               </li>
             </ul>
             <Route path="/public" component={Public} />
-            <Route path="/login" component={Login} />
+            <Route path={routePaths.landing.login} component={Login} />
             <ProtectedRoute
               path="/protected"
               component={Protected}

@@ -11,3 +11,10 @@ declare module 'styled-components' {
     gradient: string
   }
 }
+
+declare global {
+  // eslint-disable-next-line
+  interface Window {
+    _env_: any
+  }
+}
